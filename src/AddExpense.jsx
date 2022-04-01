@@ -33,8 +33,10 @@ const Add = styled.div`
         }
         button{
             @media (max-width:450px) {
-                font-size: .6rem;
+                font-size: 1.2rem;
                 margin-top: 6%;
+                height: 6vh;
+                width: 40%;
             }
             width: 20%;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

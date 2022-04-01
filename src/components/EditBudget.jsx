@@ -16,6 +16,15 @@ const Cont = styled.div`
     }
 `
 const Btn = styled.button`
+    @media (max-width:450px) {
+        font-size: 1.2rem;
+        margin-top: 6%;
+        height: 4vh;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     padding: 2% 12%;
     border: none;
     border-radius: 5px;
