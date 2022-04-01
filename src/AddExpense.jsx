@@ -67,7 +67,7 @@ function AddExpense() {
         setPrice('')
         // we are sending this object to our Expense reducer
         const expense = {
-            id: uuidv4,
+            id: uuidv4(),
             desc: desc,
             price: parseInt(price)
         }

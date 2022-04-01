@@ -9,11 +9,13 @@ const AppReducer = (state,action) => {
         expense: [...state.expense, action.payload]
       }
 
-      case 'DELETE_EXEPENSE':
-        return{
+      case 'DELETE_EXEPENSE': 
+        return {
           ...state,
-          expense: state.expense.filter((expens)=> expens.id !== action.payload),
-        }
+          expense: state.expense.filter(
+            (expenses) => expenses.id !== action.payload
+          ),
+        };
 
       case 'SET_BUDGET':
       return{
@@ -30,11 +32,6 @@ const AppReducer = (state,action) => {
 const initailState = {
   budget:1000,
   expense:[
-    {
-      id:1,
-      desc: 'bus',
-      price: 12000
-    }
 
   ]
 }
