@@ -4,6 +4,10 @@ import Expenditure from './components/Expenditure'
 import Remaining from './components/Remaining'
 
 const Param = styled.div`
+    @media (max-width:450px) {
+      flex-direction: column;
+      height: auto;
+    }
     width: 100%;
     height: 30vh;
     align-items: center;
@@ -14,6 +18,7 @@ const Param = styled.div`
 
 function Params() {
   return (
+    // this houses the Budget, Remaining, and Expenditure components
     <Param>
         <Budget />
         <Remaining />

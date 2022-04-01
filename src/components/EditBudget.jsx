@@ -26,6 +26,7 @@ const Btn = styled.button`
 `
 
 function EditBudget({budget,handleSaveClick}) {
+    // this input form will be rendered when we click on the edit button
     const [value, setValue] = useState(budget)
   return (
     <Cont>

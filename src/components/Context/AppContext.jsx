@@ -30,7 +30,12 @@ const AppReducer = (state,action) => {
 const initailState = {
   budget:1000,
   expense:[
-   
+    {
+      id:1,
+      desc: 'bus',
+      price: 12000
+    }
+
   ]
 }
 

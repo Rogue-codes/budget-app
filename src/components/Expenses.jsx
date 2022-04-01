@@ -14,9 +14,13 @@ const List = styled.li`
     }
 `
 const Spanner = styled.span`
+  @media (max-width:450px) {
+    width: 50%;
+    justify-content: flex-end;
+  }
     width: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `
 const Price = styled.span`
@@ -39,7 +43,7 @@ function Expenses({price,desc,id}) {
     <List>
         {desc} 
         <Spanner>
-           <Price>₦{price}.</Price>
+           <Price>₦{price}</Price> 
             <TiDelete size='1.7rem' onClick={handleDelete} className='del'></TiDelete>        
         </Spanner>
     </List>

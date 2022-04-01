@@ -4,6 +4,11 @@ import { AppContext } from './Context/AppContext'
 
 
 const Exp = styled.div`
+    @media (max-width:450px) {
+      width: 95%;
+      margin-bottom: 5%;
+      height: 10vh;
+    }
     width: 30%;
     margin: auto;
     height: 80%;
@@ -17,9 +22,15 @@ const Exp = styled.div`
     padding: 2%;
 `
 const Text = styled.h2`
+  @media (max-width:450px) {
+    font-size: 1rem;
+  }
   font-size: 1.3vw;
 `
 const Price = styled.p`
+  @media (max-width:450px) {
+    font-size: 1rem;
+  }
   font-size: 1.3vw;
 `
 
@@ -28,7 +39,7 @@ function Expenditure() {
   const {expense} = useContext(AppContext)
 
   const total = expense.reduce((totall, item)=>{
-    return (totall = totall += item.price)
+    return (totall = totall += item.price) /* Sum of all the expenses */
   },0)
   return (
     <Exp>

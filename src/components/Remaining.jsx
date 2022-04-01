@@ -3,6 +3,11 @@ import styled from 'styled-components'
 import { AppContext } from './Context/AppContext'
 
 const Rem = styled.div`
+  @media (max-width:450px) {
+    width: 95%;
+    margin-bottom: 5%;
+    height: 10vh;
+  }
   width: 30%;
   margin: auto;
   height: 80%;
@@ -17,9 +22,15 @@ const Rem = styled.div`
 `
 
 const Text = styled.h2`
+  @media (max-width:450px) {
+    font-size: 1rem;
+  }
   font-size: 1.3vw;
 `
 const Price = styled.p`
+  @media (max-width:450px) {
+    font-size: 1rem;
+  }
   font-size: 1.3vw;  
 `
 function Remaining() {

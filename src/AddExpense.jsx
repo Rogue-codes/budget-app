@@ -15,6 +15,9 @@ const Add = styled.div`
         margin: auto;
         padding: 4%;
         input{
+            @media (max-width:450px) {
+                width: 100%;
+            }
             width: 60%;
             display: block;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,6 +32,10 @@ const Add = styled.div`
             }
         }
         button{
+            @media (max-width:450px) {
+                font-size: .6rem;
+                margin-top: 6%;
+            }
             width: 20%;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             cursor: pointer;
@@ -46,8 +53,8 @@ const Add = styled.div`
 `
 
 function AddExpense() {
-    const {dispatch} = useContext(AppContext)
-    const [desc, setDesc] = useState('')
+    const {dispatch} = useContext(AppContext)  /*this will send our state and action to the Context API*/
+    const [desc, setDesc] = useState('') 
     const [price, setPrice] = useState('')
 
     const handleSubmit = (e) => {
@@ -56,7 +63,7 @@ function AddExpense() {
         setDesc('')
 
         setPrice('')
-
+        // we are sending this object to our Expense reducer
         const expense = {
             id: uuidv4,
             desc: desc,

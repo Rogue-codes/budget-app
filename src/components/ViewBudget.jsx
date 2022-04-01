@@ -12,12 +12,21 @@ const Bud = styled.div`
     padding: 2%;
 `
 const Text = styled.h2`
+    @media (max-width:450px) {
+      font-size: 1rem;
+    }
     font-size: 1.3vw;
 `
 const Price = styled.p`
+    @media (max-width:450px) {
+      font-size: 1rem;
+    }
     font-size: 1.3vw;
 `
 const Btn = styled.button`
+    @media (max-width:450px) {
+      font-size: .8rem;
+    }
     padding: 2% 12%;
     border: none;
     border-radius: 5px;
@@ -28,6 +37,7 @@ const Btn = styled.button`
 `
 function ViewBudget({budget, handleEditClick}) {
   return (
+    //   this is the Component that will render when we are not editing the Value of our BALANCE.
     <Bud>
         <Text>Budget:</Text>
         <Price>₦{budget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</Price>

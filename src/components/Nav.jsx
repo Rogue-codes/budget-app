@@ -13,6 +13,9 @@ const Navigate = styled.nav`
     margin-bottom: 5%;
 `
 const H = styled.h1`
+    @media (max-width:450px) {
+      font-size: 1.3rem;
+    }
     font-size: 1.4vw;
 `
 const Btn = styled.button`
@@ -23,11 +26,11 @@ const Btn = styled.button`
     border: none;
 `
 
-function Nav({switcher}) {
+function Nav({switcher}) { /* switcher is a prop coming from our APP.js component */
   return (
     <Navigate>
         <H>PLANNER</H>
-        <Btn onClick={switcher}><BsFillMoonFill></BsFillMoonFill></Btn>
+        <Btn onClick={switcher}><BsFillMoonFill></BsFillMoonFill></Btn> 
     </Navigate>
   )
 }
