@@ -30,7 +30,7 @@ const AppReducer = (state,action) => {
 }
 
 const initailState = {
-  budget:1000,
+  budget:0,
   expense:[
 
   ]
@@ -50,3 +50,4 @@ export const AppProvider = (props) => {
     </AppContext.Provider>
   )
 }
+

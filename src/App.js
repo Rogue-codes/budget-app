@@ -23,6 +23,9 @@ function App() {
   const switcher = () =>{
     setDarkMode(!darkMode)
   }
+
+
+  
   return (
     <AppProvider>
       <Container className="App" bg={darkMode ? '#0a051d' : '#f0f8ff'} cl={darkMode ? '#f0f8ff' : '#0a051d'}>
